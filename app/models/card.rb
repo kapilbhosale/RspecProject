@@ -1,11 +1,12 @@
 class Card 
-	def initialize(suit:, rank:)
-		@suit = suit
-		@rank = case rank
+	attr_reader :suit,:rank
+	def initialize(selected_suit, selected_rank)
+		@suit = selected_suit
+		@rank = case selected_rank
 		when :jack then 11
 		when :queen then 12
 		when :king then 13
-		else rank
+		else selected_rank
 		end
 	end
 
